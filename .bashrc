@@ -5,6 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+alias off='shutdown -h now'
 alias ls='ls --color=auto'
 PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 1)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 3)\]] \[$(tput setaf 1)\]\w\[$(tput setaf 7)\] > \[$(tput sgr0)\]"
 
