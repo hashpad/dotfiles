@@ -43,21 +43,15 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
-nnoremap <Left> :echo "No left for you!"<CR>
-vnoremap <Left> :<C-u>echo "No left for you!"<CR>
-inoremap <Left> <C-o>:echo "No left for you!"<CR>
-
-nnoremap <Right> :echo "No Right for you!"<CR>
-vnoremap <Right> :<C-u>echo "No Right for you!"<CR>
-inoremap <Right> <C-o>:echo "No Right for you!"<CR>
 
 
-nnoremap <Up> :echo "No Up for you!"<CR>
-vnoremap <Up> :<C-u>echo "No Up for you!"<CR>
-inoremap <Up> <C-o>:echo "No Up for you!"<CR>
+nnoremap D "_d
+vnoremap D "_d
+
+imap <Left> <Nop>
+imap <Right> <Nop>
+imap <Up> <Nop>
+imap <Down> <Nop>
 
 
-nnoremap <Down> :echo "No Down for you!"<CR>
-vnoremap <Down> :<C-u>echo "No Down for you!"<CR>
-inoremap <Down> <C-o>:echo "No Down for you!"<CR>
-
+noremap <Space> <S-v>
