@@ -1,6 +1,5 @@
-"set hlsearch
+set hlsearch
 set incsearch
-
 
 set tabstop=4
 set softtabstop=4
@@ -61,3 +60,4 @@ inoremap <Up> <C-o>:echo "No Up for you!"<CR>
 nnoremap <Down> :echo "No Down for you!"<CR>
 vnoremap <Down> :<C-u>echo "No Down for you!"<CR>
 inoremap <Down> <C-o>:echo "No Down for you!"<CR>
+
