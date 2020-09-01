@@ -41,9 +41,10 @@ done&
 
 
 #KeyBoard Layout
+sxhkd &
 setxkbmap de &
 xmodmap ~/.config/xmodmap.conf &
 xbindkeys -p &
 exec dwm
-
+#exec startkde
 
