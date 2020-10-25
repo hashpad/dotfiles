@@ -1,0 +1,19 @@
+# Mute Volume
+"pactl set-sink-mute @DEFAULT_SINK@ toggle && scripts/update.sh"
+	XF86AudioMute
+
+# + Volume
+"~/scripts/volume.sh up"
+	XF86AudioRaiseVolume
+
+# - Volume
+"~/scripts/volume.sh down"
+	XF86AudioLowerVolume
+
+"~/scripts/brightness.sh up"
+	XF86MonBrightnessUp
+
+"~/scripts/brightness.sh down"
+	XF86MonBrightnessDown
+"scrot -s '/tmp/%F_%T_$wx$h.png' -e 'xclip -selection clipboard -target image/png -i $f && rm $f'"
+    Print+Release
