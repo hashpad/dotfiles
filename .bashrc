@@ -10,10 +10,18 @@ export PATH="/usr/share/eclipse/jee-2020-06/eclipse:$PATH"
 
 
 
+alias vim='nvim'
 alias off='shutdown -h now'
 alias ls='ls --color=auto'
 export PATH="$PATH:/opt/yarn-[version]/bin"
-PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 1)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 3)\]] \[$(tput setaf 1)\]\w\[$(tput setaf 7)\] > \[$(tput sgr0)\]"
+function _update_ps1() {
+        PS1=$(powerline-shell $?)
+    }
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+        PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi
+#PS1="\[$(tput bold)\]\[$(tput setaf 3)\][\[$(tput setaf 1)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h\[$(tput setaf 3)\]] \[$(tput setaf 1)\]\w\[$(tput setaf 7)\] > \[$(tput sgr0)\]"
 
 #PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]\u\[$(tput setaf 2)\]@\[$(tput setaf 4)\]\h \[$(tput setaf 5)\]\w\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 
