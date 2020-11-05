@@ -1,0 +1,20 @@
+super + b
+    chromium %U --incognito
+super + e
+    urxvt -e ranger
+super + l
+    slock
+super + m
+    st -e cmus & st -e vis & st -e clyrics -c
+super + c
+    cmus-remote --pause
+super + n
+    cmus-remote --next
+super + p
+    cmus-remote --prev
+super + s
+    cmus-remote --shuffle
+super + v
+    cmus-remote --stop && cmus-remote --play
+
+

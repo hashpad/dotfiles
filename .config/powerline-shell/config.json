@@ -1,0 +1,18 @@
+{
+  "segments": [
+    "newline",
+    "hostname",
+    "ssh",
+    "cwd",
+    "newline",
+    "root"
+  ],
+  "mode": "patched",
+  "cwd": {
+    "max_depth": 5
+  },
+  "theme": "~/.config/powerline-shell/theme.py",
+  "vcs": {
+    "show_symbol": "true"
+  }
+}

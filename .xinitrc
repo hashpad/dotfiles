@@ -34,6 +34,7 @@ fi
 unclutter -idle 1 -jitter 2 -root &
 feh --bg-scale ~/Wallpapers/current.jpeg &
 xcompmgr -o 0.7 &
+pavucontrol &
 
 
 ./scripts/update.sh init &
