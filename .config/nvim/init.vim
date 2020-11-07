@@ -248,5 +248,5 @@ nnoremap _ <C-d>
 nnoremap e $
 map <C-a> <esc>ggVG<CR>
 noremap <S-y> "+y
-nnoremap <S-d> "_dd
-vnoremap <S-d> "_dd
+nnoremap <S-d> "_dd<Esc>
+vnoremap <S-d> "_dd<Esc>
