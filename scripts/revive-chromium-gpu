@@ -1,0 +1,16 @@
+#!/bin/sh
+# /lib/systemd/system-sleep/
+set -e
+
+if [ "$2" = "suspend" ] || [ "$2" = "hybrid-sleep" ]
+then
+    case "$1" in
+        pre)
+            true 
+            ;;
+        post) 
+            sleep 1
+            pkill -f 'chromium \-\-type=gpu-process'
+            ;;
+    esac
+fi

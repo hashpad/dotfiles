@@ -1,0 +1,135 @@
+# A valid snippet should starts with:
+#
+#		snippet trigger_word [ "description" [ options ] ]
+#
+# and end with:
+#
+#		endsnippet
+#
+# Snippet options:
+#
+#		b - Beginning of line.
+#		i - In-word expansion.
+#		w - Word boundary.
+#		r - Regular expression
+#		e - Custom context snippet
+#		A - Snippet will be triggered automatically, when condition matches.
+#
+# Basic example:
+#
+#		snippet emitter "emitter properties" b
+#		private readonly ${1} = new Emitter<$2>()
+#		public readonly ${1/^_(.*)/$1/}: Event<$2> = this.$1.event
+#		endsnippet
+#
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+
+snippet CARD "replace CARD" bA
+"
+$1
+";"
+$2
+"
+endsnippet
+snippet BR "replace BR" Ai
+<br>
+endsnippet
+snippet ELEM "replace element of" A
+∈
+endsnippet
+snippet DEG "replace °" Ai
+°
+endsnippet
+snippet ALPHA "replace α" Ai
+α
+endsnippet
+snippet DELTA "replace Δ" Ai
+Δ
+endsnippet
+snippet BOMEGA "replace Ω" Ai
+Ω
+endsnippet
+snippet OMEGA "replace ω" Ai
+ω
+endsnippet
+snippet PHI "replace φ" Ai
+φ
+endsnippet
+snippet LAMBDA "replace λ" Ai
+λ
+endsnippet
+snippet THETA "replace θ" Ai
+θ
+endsnippet
+snippet PI "replace π" Ai
+π
+endsnippet
+snippet INTEGRAL "replace ∫" Ai
+∫
+endsnippet
+snippet EPSILON "replace ε" Ai
+ε
+endsnippet
+snippet BETA "replace β" Ai
+β
+endsnippet
+snippet GAMMA "replace γ" Ai
+γ
+endsnippet
+snippet REAL "replace ℝ" Ai 
+ℝ
+endsnippet
+snippet ETA "replace η" Ai
+η
+endsnippet
+snippet XI "replace ξ" Ai
+ξ
+endsnippet
+snippet APPROX "replace ≅" Ai
+≅
+endsnippet
+snippet PROPO "replace ≅" Ai
+∝
+endsnippet
+snippet OVER "replace overline" Ai
+<span style='text-decoration: overline;'>$1</span>
+endsnippet
+snippet UNDER "replace underline" Ai
+<u>$1</u>
+endsnippet
+snippet SUP "replace sup" Ai
+<sup>$1</sup>
+endsnippet
+snippet SUB "replace sub" Ai
+<sub>$1</sub>
+endsnippet
+snippet COLOR "replace sub" Ai
+<p style='display:inline; color: $1;'>$2</p>
+endsnippet
+snippet BOLD "replace bold text" Ai
+<b>$1</b>
+endsnippet
+snippet GE "replace greater or equal" A
+≥
+endsnippet
+snippet LE "replace lesser or equal" A
+≤
+endsnippet
+snippet AND "replace and" A
+∧
+endsnippet
+snippet NOT "replace not" A
+¬
+endsnippet
+snippet forAll "replace and" Ai
+∀
+endsnippet
+snippet plusMinus "replace and" Ai
+±
+endsnippet
+snippet notEqual "replace ≠" Ai
+≠
+endsnippet
+snippet SPACE "replace nbsp" Ai
+&nbsp
+endsnippet

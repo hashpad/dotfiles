@@ -1,0 +1,45 @@
+super + b
+    chromium %U --incognito
+super + space
+    xfce4-appfinder
+control + alt + e
+    nemo
+control + shift + Escape
+    st -e htop
+super + e
+    urxvt -t ranger -e ranger 
+super + m
+    st -t vis -e vis & (sleep 0.1 & termite -t clyrics -e "tmux new-session 'clyrics -c'") & (sleep 0.2 && st -t cmus -e cmus)
+super + c
+    cmus-remote --pause
+super + n
+    cmus-remote --next
+super + p
+    cmus-remote --prev
+super + s
+    cmus-remote --shuffle
+super + v
+    cmus-remote --stop && cmus-remote --play
+control + shift + @Print
+    ~/scripts/PicToTextClip.sh
+shift + @Print
+    xfce4-screenshooter 
+@Print
+    ~/scripts/print.sh
+control + alt + t
+    st -t st_to_tag -e tmux
+super + k
+    passmenu
+alt + shift + a
+    setxkbmap ma
+alt + shift + d
+    setxkbmap de
+super + F12
+    slock
+control + alt + r
+    pkill redshift
+control + alt + shift + r
+    redshift -l 49.00937:8.40444 &
+
+
+

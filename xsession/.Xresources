@@ -1,0 +1,96 @@
+
+
+#define base00 #1E1E1E
+#define base01 #262626
+#define base02 #303030
+#define base03 #3C3C3C
+#define base04 #808080
+#define base05 #D4D4D4
+#define base06 #E9E9E9
+#define base07 #FFFFFF
+#define base08 #D16969
+#define base09 #B5CEA8
+#define base0A #D7BA7D
+#define base0B #608B4E
+#define base0C #9CDCFE
+#define base0D #569CD6
+#define base0E #C586C0
+#define base0F #CE9178
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+!systray
+dwm.fgschemenorm:       #bbbbbb
+dwm.bgschemenorm:       #1C1C1C
+dwm.bdschemenorm:       #2A2A2A
+
+
+dwm.fgschemesel:        #eeeeee
+dwm.bgschemesel:        #2A2A2A
+dwm.bdschemesel:        #005f87
+
+
+!statusbar
+dwm.fgschemestatus: #bbbbbb
+dwm.bgschemestatus: #1C1C1C
+dwm.bdschemestatus: #2A2A2A
+
+dwm.fgschemetagsel: #0087D7
+dwm.bgschemetagsel: #2A2A2A
+dwm.bdschemetagsel: #2A2A2A
+
+dwm.fgschemetagsnorm: #bbbbbb
+dwm.bgschemetagsnorm: #1C1C1C
+!dwm.bdschemetagsnorm:#2A2A2A
+
+dwm.fgschemeinfosel: #bbbbbb
+dwm.bgschemeinfosel: #262626
+!dwm.bdschemeinfosel:#2A2A2A
+
+dwm.fgschemeinfonorm: #bbbbbb
+dwm.bgschemeinfonorm: #1C1C1C
+dwm.bdschemeinfonorm: #2A2A2A
+
+
+
+dmenu.background:      #1e1e1e
+dmenu.foreground:      #bbbbbb
+dmenu.selbackground:   #0087D7
+dmenu.selforeground:   #eeeeee
+
+
+urxvt*font:             xft:Misc Tamsyn:size=14
+urxvt*termName:         rxvt
+urxvt*background:       #1e1e1e
+urxvt*foreground:       #bbbbbb
+urxvt*scrollBar:        false
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*perl-ext-common:  default,matcher
+urxvt*urlLauncher:      /usr/bin/jumanji
+urxvt*matcher.button:   1
+xft:mono:size=10:minspace=False
+
+URxvt.transparent:   true
+URxvt.tintColor:     white
+URxvt.shading:       20 
+
