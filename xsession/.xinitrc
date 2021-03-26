@@ -1,7 +1,7 @@
 #!/bin/sh
 
-play-with-mpv &
-synergy &
+#play-with-mpv &
+#synergy &
 sxhkd &
 
 userresources=$HOME/.Xresources
@@ -45,11 +45,14 @@ nitrogen --restore &
 #xbindkeys -p &
 setxkbmap de &
 pa-applet &
-#nm-applet &
-#cbatticon &
+nm-applet &
+cbatticon &
 unclutter -idle 1 -jitter 2 -root &
 picom &
 #pavucontrol &
+if (("$(ps aux | grep -o xfce4-power-manager | awk 'END{print NR}')"<"2"));then
+  xfce4-power-manager --daemon &
+fi
 if (("$(ps aux | grep -o xfce4-clipman | awk 'END{print NR}')"<"2"));then
   xfce4-clipman &
 fi

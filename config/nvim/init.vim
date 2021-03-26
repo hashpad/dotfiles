@@ -22,6 +22,9 @@ Plug 'zhaohuaxishi/auto-header'
 
 Plug 'ryanoasis/vim-devicons'
 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 
 Plug 'honza/vim-snippets'
 
@@ -33,9 +36,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'unkiwii/vim-nerdtree-sync'
 
 Plug 'morhetz/gruvbox'
-Plug 'flazz/vim-colorschemes'
-Plug 'atelierbram/vim-colors_atelier-schemes'
-Plug 'tomasiser/vim-code-dark'
+"Plug 'flazz/vim-colorschemes'
+"Plug 'atelierbram/vim-colors_atelier-schemes'
+"Plug 'tomasiser/vim-code-dark'
 
 Plug 'urso/haskell_syntax.vim'
 
@@ -67,15 +70,15 @@ autocmd BufWritePre *.ejs :setfiletype html
 
 
 " open NERDTree automatically
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * NERDTree
 
 let g:NERDTreeGitStatusWithFlags = 1
 let g:nerdtree_sync_cursorline = 1
 let g:NERDTreeFileExtensionHighlightFullName = 1
 let g:NERDTreeExactMatchHighlightFullName = 1
 let g:NERDTreePatternMatchHighlightFullName = 1
-autocmd BufWritePost * NERDTreeFocus | execute 'normal R' | wincmd p
+"autocmd BufWritePost * NERDTreeFocus | execute 'normal R' | wincmd p
 
 
 vmap <leader>f  <Plug>(coc-format-selected)
@@ -121,12 +124,12 @@ set tabstop=2
 set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
-colorscheme codedark
+"colorscheme codedark
 
 "colorscheme Atelier_SulphurpoolLight
 "colorscheme Atelier_DuneDark
 "colorscheme badwolf
-"colorscheme gruvbox
+colorscheme gruvbox
 "colorscheme molokai
 
 "colorscheme seoul256

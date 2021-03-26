@@ -47,7 +47,7 @@ rsync --progress /home/$1/.config/htop/htoprc config/htop/
 rsync --progress /home/$1/.config/mpv/mpv.conf config/mpv/
 rsync --progress /home/$1/.config/neofetch/config.conf config/neofetch/
 rsync --progress /home/$1/.config/nvim/init.vim /home/$1/.config/nvim/coc-settings.json config/nvim/
-rsync --progress /home/$1/.config/picom.conf config/picom/
+rsync --progress /home/$1/.config/picom/picom.conf config/picom/
 rsync --progress /home/$1/.config/ranger/rc.conf /home/$1/.config/ranger/rifle.conf config/ranger/
 rsync --progress /home/$1/.config/sxhkd/sxhkdrc config/sxhkd/
 rsync --progress /home/$1/.config/termite/config config/termite/

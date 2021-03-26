@@ -1,9 +1,9 @@
 super + b
-    chromium %U --incognito
+    firefox
 super + space
     xfce4-appfinder
 control + alt + e
-    nemo
+    pcmanfm
 control + shift + Escape
     st -e htop
 super + e
@@ -43,3 +43,7 @@ control + alt + shift + r
 
 
 
+XF86MonBrightnessDown
+    ~/scripts/brightness.sh down
+XF86MonBrightnessUp
+    ~/scripts/brightness.sh up
