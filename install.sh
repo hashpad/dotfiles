@@ -29,7 +29,7 @@ rsync --progress -var scripts /home/$1/
 
 
 #backup xprofile...
-rsync --progress xsession/.xprofile xsession/.xinitrc xsession/.Xresources /home/$1/
+rsync --progress xsession/.xprofile xsession/.xinitrc xsession/.Xresources xsession/.xsessionrc /home/$1/
 rsync --progress xsession/lock.service /etc/systemd/system/
 systemctl enable lock.service
 rsync --progress xsession/grub /etc/default/

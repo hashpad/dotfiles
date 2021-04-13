@@ -3,13 +3,13 @@
 #play-with-mpv &
 #synergy &
 #synergyc -n pkl 192.168.1.19 &
-if [ "$XDG_SESSION_DESKTOP" == "xfce" ]; then
-  ksuperkey -e 'Super_L=F1' &
-fi
-if [ "$XDG_SESSION_DESKTOP" != "gnome" ]; then
-  sxhkd &
-fi
-if [ "$XDG_SESSION_DESKTOP" == "dwm" ]; then
+#if [ "$XDG_SESSION_DESKTOP" == "xfce" ]; then
+  #ksuperkey -e 'Super_L=F1' &
+#fi
+#if [ "$XDG_SESSION_DESKTOP" != "gnome" ]; then
+#fi
+#if [ "$XDG_SESSION_DESKTOP" == "dwm" ]; then
+if [ "$DESKTOP_SESSION" == "dwm" ]; then
 
   userresources=$HOME/.Xresources
   usermodmap=$HOME/.Xmodmap
@@ -55,11 +55,12 @@ if [ "$XDG_SESSION_DESKTOP" == "dwm" ]; then
   nm-applet &
   #cbatticon &
   unclutter -idle 1 -jitter 2 -root &
-  #picom &
+  picom &
   #pavucontrol &
-  if (("$(ps aux | grep -o xfce4-clipman | awk 'END{print NR}')"<"2"));then
-    xfce4-clipman &
-  fi
+  sxhkd &
+  #if (("$(ps aux | grep -o xfce4-clipman | awk 'END{print NR}')"<"2"));then
+    #xfce4-clipman &
+  #fi
   if (("$(ps aux | grep -o xfce4-power-manager | awk 'END{print NR}')"<"2"));then
     xfce4-power-manager --daemon &
   fi

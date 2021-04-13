@@ -66,83 +66,83 @@ function myCPU {
 	echo -e "󰻠 $cpu%"
 }
 
-#function myBattery {
-    #acpi=`acpi`
-    #if [ "${acpi:11:1}" == "C" ];then
-        #if [ "${acpi:23:1}" == "0" ];then
-            #percentage="100"
-            #remaining=""
-        #else
-            #percentage="${acpi:21:2}"
-            #remaining="${acpi:26:5}"
-        #fi
-        #icon="\uf1e6"
-        #if (( "$percentage" >= "99" ));then
-            #percentage="100"
-            #remaining=""
-        #fi
-    #fi   
-    #if [ "${acpi:11:1}" == "U" ];then
-        #if [ "${acpi:22:1}" == "0" ];then
-            #percentage="100"
-            #remaining=""
-        #else
-            #percentage="${acpi:20:2}"
-            #remaining=""
-        #fi
-        #icon="\uf1e6"
-        #if (( "$percentage" >= "99" ));then
-            #percentage="100"
-            #remaining=""
-        #fi
-    #fi
-    #if [ "${acpi:11:1}" == "D" ];then
-        #if [ "${acpi:26:1}" == "0" ];then
-            #percentage="100"
-            #remaining="${acpi:30:5}"
-        #else
-            #percentage="${acpi:24:2}"
-            #remaining="${acpi:29:5}"
-        #fi
-        #if (( "$percentage" >= "90" ));then
-            #icon="\uf240"
-        #elif (( "$percentage" >= "75" ));then
-            #icon="\uf241"
-        #elif (( "$percentage" >= "50" ));then
-            #icon="\uf242"
+function myBattery {
+    acpi=`acpi`
+    if [ "${acpi:11:1}" == "C" ];then
+        if [ "${acpi:23:1}" == "0" ];then
+            percentage="100"
+            remaining=""
+        else
+            percentage="${acpi:21:2}"
+            remaining="${acpi:26:5}"
+        fi
+        icon="\uf1e6"
+        if (( "$percentage" >= "99" ));then
+            percentage="100"
+            remaining=""
+        fi
+    fi   
+    if [ "${acpi:11:1}" == "U" ];then
+        if [ "${acpi:22:1}" == "0" ];then
+            percentage="100"
+            remaining=""
+        else
+            percentage="${acpi:20:2}"
+            remaining=""
+        fi
+        icon="\uf1e6"
+        if (( "$percentage" >= "99" ));then
+            percentage="100"
+            remaining=""
+        fi
+    fi
+    if [ "${acpi:11:1}" == "D" ];then
+        if [ "${acpi:26:1}" == "0" ];then
+            percentage="100"
+            remaining="${acpi:30:5}"
+        else
+            percentage="${acpi:24:2}"
+            remaining="${acpi:29:5}"
+        fi
+        if (( "$percentage" >= "90" ));then
+            icon="\uf240"
+        elif (( "$percentage" >= "75" ));then
+            icon="\uf241"
+        elif (( "$percentage" >= "50" ));then
+            icon="\uf242"
 
-        #elif (( "$percentage" >= "20" ));then
-            #icon="\uf243"
-        #elif (( "$percentage" >= "5" ));then
-            #icon="\uf244"
-        #else
-            #STATUS=$(cmus-remote -Q | grep -a '^status' | awk '{gsub("status ", "");print}')
+        elif (( "$percentage" >= "20" ));then
+            icon="\uf243"
+        elif (( "$percentage" >= "5" ));then
+            icon="\uf244"
+        else
+            STATUS=$(cmus-remote -Q | grep -a '^status' | awk '{gsub("status ", "");print}')
 
-            #if [ "$STATUS" = "playing" ]; then
-                #cmus-remote -u
-            #fi
+            if [ "$STATUS" = "playing" ]; then
+                cmus-remote -u
+            fi
             
-            #loginctl hibernate
-        #fi
-    #fi
-    #if [ "${acpi:11:1}" == "F" ];then
-        #percentage="100"
-        #remaining=""
-        #icon="\uf240"
-    #fi
-    #percentage="${percentage//%}"
-    #if [ "${remaining:0:1}" == "d" ];then
-        #remaining="calc..."
-    #fi
-    #if (( "$percentage" <= "9" )) && [ "${acpi:11:1}" == "D" ];then
-        #remaining="${acpi:28:5}"
-    #fi
+            loginctl hibernate
+        fi
+    fi
+    if [ "${acpi:11:1}" == "F" ];then
+        percentage="100"
+        remaining=""
+        icon="\uf240"
+    fi
+    percentage="${percentage//%}"
+    if [ "${remaining:0:1}" == "d" ];then
+        remaining="calc..."
+    fi
+    if (( "$percentage" <= "9" )) && [ "${acpi:11:1}" == "D" ];then
+        remaining="${acpi:28:5}"
+    fi
 
-    #if (( "$percentage" <= "9" )) && [ "${acpi:11:1}" == "C" ];then
-        #remaining="${acpi:25:5}"
-    #fi
-    #echo -e "$icon  $percentage%~$remaining" 
-#}
+    if (( "$percentage" <= "9" )) && [ "${acpi:11:1}" == "C" ];then
+        remaining="${acpi:25:5}"
+    fi
+    echo -e "$icon  $percentage%~$remaining" 
+}
 
 
 sanitize_path() {
@@ -194,7 +194,8 @@ if (("$(ps aux | grep -o picom | awk 'END{print NR}')"<"2"));then
 picom &
 fi
 while true; do
-  xsetroot -name "$(dwm_cmus)$(myLayout) $(weather) $(myMem) $(myCPU) [$(isConnectedToNet)] $(myDate) "
+  #xsetroot -name "$(dwm_cmus)$(myLayout) $(weather) $(myMem) $(myCPU) [$(isConnectedToNet)] $(myDate) "
+  xsetroot -name "$(myLayout) [$(myBattery)] $(myDate) "
   sleep 0.5
 done
 
