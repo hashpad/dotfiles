@@ -22,5 +22,6 @@
             }
         }
     },
+    "java.jdt.ls.vmargs": "-javaagent:/home/pklao/eclipse/jee-2021-03/eclipse/lombok.jar -Xbootclasspath/a:/home/pklao/eclipse/jee-2021-03/eclipse/lombok.jar",
     "coc.preferences.extensionUpdateCheck": "daily"
 }

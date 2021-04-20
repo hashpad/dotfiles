@@ -13,6 +13,7 @@ cd ~
 
 #alias dwm='cd /run/media/pkpao/4da8e83e-1932-4e59-a0c7-13f91d660de0/archbackup/apps/dwmFork/'
 alias vim='nvim'
+#alias nvim='vim ~/.config/nvim/init.vim'
 alias ..='cd ..'
 alias .='xdg-open .'
 alias bashrc='vim ~/.bashrc'

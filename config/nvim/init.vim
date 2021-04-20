@@ -30,6 +30,7 @@ Plug 'honza/vim-snippets'
 
 Plug 'scrooloose/nerdcommenter'
 
+"Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 

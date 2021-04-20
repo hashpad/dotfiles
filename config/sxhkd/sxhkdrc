@@ -5,11 +5,11 @@ super + space
 control + alt + e
     pcmanfm
 control + shift + Escape
-    st -e htop
+    termite -e htop
 super + e
     urxvt -t ranger -e ranger 
 super + m
-    st -t vis -e vis & (sleep 0.1 & termite -t clyrics -e "tmux new-session 'clyrics -c'") & (sleep 0.2 && st -t cmus -e cmus)
+    termite -t vis -e vis & (sleep 0.1 & termite -t clyrics -e "clyrics -c") & (sleep 0.2 && termite -t cmus -e cmus)
 super + c
     cmus-remote --pause
 super + n
@@ -27,7 +27,7 @@ shift + @Print
 @Print
     ~/scripts/print.sh
 control + alt + t
-    st -t st_to_tag -e tmux
+    termite -t termite_to_tag
 super + k
     passmenu
 alt + shift + a

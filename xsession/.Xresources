@@ -90,7 +90,7 @@ urxvt*urlLauncher:      /usr/bin/jumanji
 urxvt*matcher.button:   1
 xft:mono:size=10:minspace=False
 
-URxvt.transparent:   true
+URxvt.transparent:   false
 URxvt.tintColor:     white
 URxvt.shading:       20 
 
