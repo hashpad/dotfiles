@@ -1,10 +1,12 @@
 [Unit]
 Description=Lock the screen on resume from suspend
+Before=sleep.target
 
 [Service]
 User=pklao
 Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
 ExecStart=/usr/local/bin/slock
 
 [Install]
-WantedBy=suspend.target
+WantedBy=sleep.target hibernate.target suspend.target suspend-then-hibernate.target hybrid-sleep.target

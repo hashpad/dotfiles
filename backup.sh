@@ -19,7 +19,7 @@ if ! pacman -Qi rsync; then pacman -S --noconfirm rsync ; fi
 mkdir -p shell
 mkdir -p gtk/gtk-2.0 gtk/gtk-3.0
 mkdir -p scripts
-mkdir -p xsession
+mkdir -p xsession/xorg.conf.d
 mkdir -p config/cmus config/coc/ultisnips config/fontconfig config/htop config/mpv config/neofetch config/nvim config/picom config/ranger config/sxhkd config/termite 
 
 #backup bashrc
@@ -37,6 +37,10 @@ rsync --progress -var /home/$1/scripts/* scripts/
 #backup xprofile...
 rsync --progress /home/$1/.xinitrc /home/$1/.xprofile /home/$1/.Xresources /home/$1/.xsessionrc xsession/
 rsync --progress /etc/default/grub /etc/systemd/system/lock.service /etc/systemd/logind.conf xsession/
+
+#backup xorg files
+rsync --progress /usr/share/X11/xorg.conf.d/* xsession/xorg.conf.d/
+rsync --progress /etc/polkit-1/rules.d/49-nopasswd_global.rules xsession/
 
 
 #backup config files
