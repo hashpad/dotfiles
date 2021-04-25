@@ -107,4 +107,8 @@ sudo -u $1 git clone https://github.com/postkpao/dwmFork.git /home/$1/dwmFork
 (cd /home/$1/dwmFork && make clean install)
 
 
+#plug nvim
+curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 reboot
