@@ -122,7 +122,7 @@ function myBattery {
                 cmus-remote -u
             fi
             
-            loginctl hibernate
+            systemctl hibernate
         fi
     fi
     if [ "${acpi:11:1}" == "F" ];then

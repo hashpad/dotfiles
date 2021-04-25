@@ -27,22 +27,22 @@ while read -r i;do
 done < ./packages.list
 
 
-if [ $2 -eq amdgpu ]; then
+if [ "$2" == "amdgpu" ]; then
   while read -r i;do
-    if ! pacman -Qi "$i"; then pacman -S --noconfirm "$i" ; fi
+    if ! pacman -Qi "$i" &>/dev/null; then pacman -S --noconfirm "$i" ; fi
   done < ./packages.amdgpu.list
 fi
 
-if [ $2 -eq nvidia ]; then
+if [ "$2" == "nvidia" ]; then
   pacman -S --noconfirm nvidia
 fi
 
 sudo -u $1 git clone https://aur.archlinux.org/yay.git /home/$1/yay
-(cd /home/pklao/yay && yes | sudo -u $1 makepkg -si)
+(cd /home/$1/yay && yes | sudo -u $1 makepkg -si)
 sudo -u $1 rm -rf /home/$1/yay
 
 while read -r i;do
-  if ! pacman -Qi "$i"; then yes | sudo -u $1 yay -S --noconfirm "$i" ; fi
+  if ! pacman -Qi "$i" &>/dev/null; then yes | sudo -u $1 yay -S --noconfirm "$i" ; fi
 done < ./packages_yay.list
 
 #restore bashrc
@@ -103,7 +103,7 @@ systemctl enable powertop.service
 systemctl enable NetworkManager
 systemctl enable bluetooth
 
-sudo -u $1 git clone https://github.com/dwmFork.git /home/$1/dwmFork
+sudo -u $1 git clone https://github.com/postkpao/dwmFork.git /home/$1/dwmFork
 (cd /home/$1/dwmFork && make clean install)
 
 
