@@ -3,13 +3,13 @@ super + b
 super + space
     xfce4-appfinder
 control + alt + e
-    pcmanfm
+    thunar
 control + shift + Escape
-    termite -e htop
+    kitty -e htop
 super + e
-    urxvt -t ranger -e ranger 
+    kitty -T ranger -e ranger 
 super + m
-    termite -t vis -e vis & (sleep 0.1 & termite -t clyrics -e "clyrics -c") & (sleep 0.2 && termite -t cmus -e cmus)
+    (sleep 0.1 & kitty -T clyrics -e clyrics -c) & (sleep 0.2 && kitty -T cmus -e cmus)
 super + c
     cmus-remote --pause
 super + n
@@ -27,7 +27,7 @@ shift + @Print
 @Print
     ~/scripts/print.sh
 control + alt + t
-    termite -t termite_to_tag
+    kitty -T kitty_to_tag
 super + k
     passmenu
 alt + shift + a
@@ -40,10 +40,5 @@ control + alt + r
     pkill redshift
 control + alt + shift + r
     redshift -l 49.00937:8.40444 &
-
-
-
-XF86MonBrightnessDown
-    ~/scripts/brightness.sh down
-XF86MonBrightnessUp
-    ~/scripts/brightness.sh up
+control + alt + shift + q
+    kill -9 -1

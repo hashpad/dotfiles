@@ -30,9 +30,9 @@ Plug 'honza/vim-snippets'
 
 Plug 'scrooloose/nerdcommenter'
 
-"Plug 'itchyny/lightline.vim'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
 
 Plug 'unkiwii/vim-nerdtree-sync'
 
@@ -332,3 +332,6 @@ noremap <C-l> w
 noremap <S-b> bi
 
 noremap <C-y> v$"+y
+
+map Ü :! pdflatex %<CR>
+map S :! mupdf $(echo % \| sed 's/tex$/pdf/') & disown <CR><CR>

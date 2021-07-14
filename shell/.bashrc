@@ -7,7 +7,7 @@ cd ~
 [[ $- != *i* ]] && return
 
 # my paths
-#export PATH="/usr/share/eclipse/jee-2020-06/eclipse:$PATH"
+export PATH="/home/pkpao/.local/bin:/usr/share/eclipse/jee-2020-06/eclipse:$PATH"
 
 
 

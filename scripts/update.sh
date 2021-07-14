@@ -194,9 +194,9 @@ if (("$(ps aux | grep -o picom | awk 'END{print NR}')"<"2"));then
 picom &
 fi
 while true; do
-  #xsetroot -name "$(dwm_cmus)$(myLayout) $(weather) $(myMem) $(myCPU) [$(myBattery)] $(myDate) "
+  xsetroot -name "$(dwm_cmus)$(myLayout) $(weather) $(myMem) $(myCPU) $(myDate) "
   #xsetroot -name "$(myLayout) [$(myBattery)] $(myDate) "
-  xsetroot -name "$(dwm_cmus)$(myLayout) [$(myBattery)] $(myDate) "
+  #xsetroot -name "$(dwm_cmus)$(myLayout) [$(myBattery)] $(myDate) "
   sleep 0.5
 done
 
