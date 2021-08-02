@@ -1,20 +1,24 @@
 #!/bin/bash
 
+usage(){
+  >&2 cat << EOF
+Usage: $(basename $0) [USER] [GPU]
+  USER: your logged in user
+  GPU: nvidia or amd
+EOF
+} 
+
 #check if running as root
-if [ "$EUID" -ne 0 ]
-  then echo "Please run as root"
-  exit 1
-fi
+[ "$EUID" -eq 0 ] || >&2 echo "Please run as root"; exit 1
 
 #check if no argument is provided
-if [ $# -eq 0 ]; then
-    echo "No arguments provided, please enter a user and graphic card"
-    exit 1
-fi
-if [ $# -eq 1 ]; then
-    echo "No graphics provided"
-    exit 1
-fi
+case ARGS_COUNT in "$#"
+  0) usage;;
+  1) >&2 echo "No graphics provided";;
+esac
+
+
+
 #check if user exists
 if ! id "$1" &>/dev/null; then
     echo 'User not found'
@@ -31,9 +35,7 @@ if [ "$2" == "amdgpu" ]; then
   while read -r i;do
     if ! pacman -Qi "$i" &>/dev/null; then pacman -S --noconfirm "$i" ; fi
   done < ./packages.amdgpu.list
-fi
-
-if [ "$2" == "nvidia" ]; then
+elif [ "$2" == "nvidia" ]; then
   pacman -S --noconfirm nvidia
 fi
 
@@ -59,6 +61,9 @@ rsync --progress -var scripts /home/$1/
 
 #restore xprofile...
 rsync --progress xsession/.xprofile xsession/.xinitrc xsession/.Xresources xsession/.xsessionrc /home/$1/
+
+sed s/user_placeholder/$1/ xsession/lock.service > xsession/lock.service
+
 rsync --progress xsession/lock.service /etc/systemd/system/
 systemctl enable lock.service
 rsync --progress xsession/grub /etc/default/
@@ -110,5 +115,9 @@ sudo -u $1 git clone https://github.com/postkpao/dwmFork.git /home/$1/dwmFork
 #plug nvim
 curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+
+pip install neovim
+pip install numpy
 
 reboot

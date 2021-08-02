@@ -1,7 +1,7 @@
 "autosave on text change (doesn't work with Nerdtree)
 "autocmd TextChanged,TextChangedI * silent write
 
-"au BufWritePost $MYVIMRC source $MYVIMRC let mapleader = "f"
+"au BufWritePost $MYVIMRC source $MYVIMRC 
 set backspace=indent,eol,start
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
@@ -36,15 +36,15 @@ Plug 'itchyny/lightline.vim'
 
 Plug 'unkiwii/vim-nerdtree-sync'
 
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
 "Plug 'flazz/vim-colorschemes'
 "Plug 'atelierbram/vim-colors_atelier-schemes'
-"Plug 'tomasiser/vim-code-dark'
+Plug 'tomasiser/vim-code-dark'
 
 Plug 'urso/haskell_syntax.vim'
 
 
-Plug 'eddyekofo94/gruvbox-material.nvim'
+"Plug 'eddyekofo94/gruvbox-material.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -128,12 +128,12 @@ set tabstop=2
 set shiftwidth=2
 " always uses spaces instead of tab characters
 set expandtab
-"colorscheme codedark
+colorscheme codedark
 
 "colorscheme Atelier_SulphurpoolLight
 "colorscheme Atelier_DuneDark
 "colorscheme badwolf
-"colorscheme gruvbox
+"colorscheme gruvbox-material
 "colorscheme molokai
 
 "colorscheme seoul256

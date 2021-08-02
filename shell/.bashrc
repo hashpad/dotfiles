@@ -11,9 +11,7 @@ export PATH="/home/pkpao/.local/bin:/usr/share/eclipse/jee-2020-06/eclipse:$PATH
 
 
 
-#alias dwm='cd /run/media/pkpao/4da8e83e-1932-4e59-a0c7-13f91d660de0/archbackup/apps/dwmFork/'
 alias vim='nvim'
-#alias nvim='vim ~/.config/nvim/init.vim'
 alias ..='cd ..'
 alias .='xdg-open .'
 alias bashrc='vim ~/.bashrc'
@@ -23,12 +21,12 @@ alias kbind='pkill sxhkd'
 alias rbind='sxhkd > /dev/null 2>&1 & disown'
 alias off='shutdown -h now'
 alias ls='ls --color=auto'
-function X() {
-  $(tmux list-sessions | grep -v attached | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t) 2&> /dev/null
-}
-function x() {
-  tmux kill-session
-}
+#function X() {
+  #$(tmux list-sessions | grep -v attached | awk 'BEGIN{FS=":"}{print $1}' | xargs -n 1 tmux kill-session -t) 2&> /dev/null
+#}
+#function x() {
+  #tmux kill-session
+#}
 #export PATH="$PATH:/opt/yarn-[version]/bin"
 #function _update_ps1() {
         #PS1=$(powerline-shell $?)

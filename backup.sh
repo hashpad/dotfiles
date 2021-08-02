@@ -1,10 +1,8 @@
 #!/bin/bash
 
 #check if no argument is provided
-if [ $# -eq 0 ]; then
-    echo "No arguments provided, please enter a user"
-    exit 1
-fi
+[ $# -eq 0 ] && >&2 echo "No arguments provided, please enter a user"; exit 1
+
 #check if user exists
 if ! id "$1" &>/dev/null; then
     echo 'user not found'

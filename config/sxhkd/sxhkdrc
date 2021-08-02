@@ -23,9 +23,9 @@ super + v
 control + shift + @Print
     ~/scripts/PicToTextClip.sh
 shift + @Print
-    xfce4-screenshooter 
+    escrotum -s
 @Print
-    ~/scripts/print.sh
+    ~/scripts/anki/print.sh
 control + alt + t
     kitty -T kitty_to_tag
 super + k

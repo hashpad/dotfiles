@@ -17,12 +17,8 @@ pulseaudio-bluetooth
 dbus
 xorg
 xorg-xinit
-jdk-openjdk
-jre-openjdk
-jre-openjdk-headless
 alsa-utils
 acpi
-anki
 bash-completion
 bluez
 bluez-utils
@@ -32,16 +28,12 @@ ca-certificates-utils
 ccls
 cmus
 dconf
-evince
 ffmpeg
 firefox
 freetype2
-glew
 harfbuzz
 htop
-lxappearance
 materia-gtk-theme
-maven
 neofetch
 neovim
 network-manager-applet
@@ -65,5 +57,6 @@ w3m
 xclip
 xfce4-appfinder
 xournalpp
-gvfs
 pass
+maim
+xorg-xclipboard

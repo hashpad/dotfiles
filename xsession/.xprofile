@@ -9,7 +9,11 @@
 #if [ "$XDG_SESSION_DESKTOP" != "gnome" ]; then
 #fi
 #if [ "$XDG_SESSION_DESKTOP" == "dwm" ]; then
+#xinput set-prop "Logitech Gaming Mouse G502" "libinput Natural Scrolling Enabled" 0
+#xrandr --output eDP --right-of HDMI-A-0
 if [ "$DESKTOP_SESSION" == "dwm" ]; then
+  export QT_QPA_PLATFORMTHEME=qt5gtk2
+
 
   userresources=$HOME/.Xresources
   usermodmap=$HOME/.Xmodmap

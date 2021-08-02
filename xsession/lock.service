@@ -3,7 +3,7 @@ Description=Lock the screen on resume from suspend
 Before=sleep.target
 
 [Service]
-User=pklao
+User=user_placeholder
 Environment=DISPLAY=:0
 ExecStartPre=/usr/bin/xset dpms force suspend
 ExecStart=/usr/local/bin/slock
