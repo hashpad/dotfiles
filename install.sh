@@ -12,7 +12,7 @@ EOF
 [ "$EUID" -eq 0 ] || >&2 echo "Please run as root"; exit 1
 
 #check if no argument is provided
-case ARGS_COUNT in "$#"
+case "$#" in
   0) usage;;
   1) >&2 echo "No graphics provided";;
 esac
