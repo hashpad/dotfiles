@@ -111,6 +111,9 @@ systemctl enable bluetooth
 sudo -u $1 git clone https://github.com/postkpao/dwmFork.git /home/$1/dwmFork
 (cd /home/$1/dwmFork && make clean install)
 
+sudo -u $1 git clone git://git.suckless.org/slock.git /home/$1/slock
+(cd /home/$1/slock && sed s/nobody/$1/ config.def.h | sed s/nogroup/wheel/ > config.def.h && make clean install)
+
 
 #plug nvim
 curl -fLo ~/.var/app/io.neovim.nvim/data/nvim/site/autoload/plug.vim \
