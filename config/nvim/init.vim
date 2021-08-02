@@ -43,6 +43,9 @@ Plug 'morhetz/gruvbox'
 
 Plug 'urso/haskell_syntax.vim'
 
+
+Plug 'eddyekofo94/gruvbox-material.nvim'
+
 " Initialize plugin system
 call plug#end()
 
@@ -130,7 +133,7 @@ set expandtab
 "colorscheme Atelier_SulphurpoolLight
 "colorscheme Atelier_DuneDark
 "colorscheme badwolf
-colorscheme gruvbox
+"colorscheme gruvbox
 "colorscheme molokai
 
 "colorscheme seoul256
