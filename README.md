@@ -1,5 +1,5 @@
 # My Dotfiles
-If you're in terested in the way my desktop looks and/or in my workflow, and you want to have the same experience i would advise you to follow the instructions bellow to have the same setup as me by running a pair of commands.
+If you're in terested in the way my desktop looks and/or in my workflow, and you want to have the same experience you can follow the instructions bellow to have the same setup as me, only by running a couple of commands.
 
 ## What's inside
 * Neovim config file with a lot of useful keybindings and plug-ins
